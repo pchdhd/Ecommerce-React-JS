@@ -1,4 +1,4 @@
-import { data } from '../data';
+
 import { Link } from "react-router-dom"
 
 export const ProductList = ({products}) => {
