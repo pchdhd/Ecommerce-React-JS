@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom"
 import ItemDetail from "../ItemDetail/ItemDetail"
 import { doc, getDoc } from "firebase/firestore"
 import { db } from "../../services/firebase/firebaseConfig"
+import Footer from "../Footer/Footer"
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState({})
     const [loading, setLoading] = useState(true)
@@ -30,6 +31,7 @@ const ItemDetailContainer = () => {
         <div>
             <div className="itemdetail-container__back"></div>
             <ItemDetail {...product} />
+            <Footer/>
         </div>
     )
 

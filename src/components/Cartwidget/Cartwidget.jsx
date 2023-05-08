@@ -5,16 +5,17 @@ import {CartContext} from "../../Context/CartContext"
 
 const Cartwidget = () => {
     const { totalQuantity, total } = useContext(CartContext)
-
+    const { cart } = useContext(CartContext)
     const navigate = useNavigate()
 
     return (
         <div >
             
             <div className='container-icon' onClick={() =>navigate("/Cart")}>
-            <span> </span>
+            <span className="container-icon__span"> {cart.length} </span>
+            
                 <img src={carrito} alt="" width={'34px'} height={'34px'} />
-                {totalQuantity} total ${total}
+                
             </div>
         </div>
     )

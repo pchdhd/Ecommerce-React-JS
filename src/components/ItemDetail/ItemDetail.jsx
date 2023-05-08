@@ -9,13 +9,10 @@ const ItemDetail = ({nombre, img, precio, descripcion, stock, id,}) => {
 
 const handleOnAdd = (count) =>{
 const productToAdd= {
-    nombre, precio, img, count, id, stock
-    
-    
+    nombre, precio, img, count, id, stock  
 }
 setCount(count)
         addItem(productToAdd)
-console.log(productToAdd)
 }
 
     return ( 

@@ -3,6 +3,7 @@ import { ProductList } from "../ProductList";
 import { useState, useEffect } from "react";
 import {getDocs, collection, query, where} from "firebase/firestore"
 import {db} from "../../services/firebase/firebaseConfig"
+import Footer from "../Footer/Footer";
 
 const ItemListContainer = ({greeting}) => {
 const [productsState, setProductsState] = useState([])
@@ -39,6 +40,7 @@ return (
     <div> 
     <span>{greeting}</span>
     <ProductList products={productsState}/>
+    <Footer/>
     </div>
 
 )}
