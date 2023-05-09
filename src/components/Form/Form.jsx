@@ -1,32 +1,38 @@
+import { useState } from "react"
 import { CartContext } from "../../Context/CartContext"
-const Form = ({cart, onConfirm,total }) => {
- console.log(total) 
+const Form = ({ cart, onConfirm, total, datos, handleConfirm }) => {
+
+    const [userEmail, SetUserEmail] = useState("")
+    const [userDireccion, SetUserDireccion] = useState("")
+    const [userTelefono, SetUserTelefono] = useState("")
+
+    const handleData = () => {
+        datos({useremail: userEmail, userdireccion: userDireccion,userTelefono: userTelefono})
+        handleConfirm()
+    }
 
 
     return (
         <div style={{ display: "grid", justifyContent: "center" }}>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="Email" required />
+            <form onSubmit={handleData}>
+            <label htmlFor="email">Email</label>
+            <input type="email" name="email" value={userEmail} onChange={(e) => SetUserEmail(e.target.value)} placeholder="Email" required />
 
-            <label for="email">Direccion</label>
-            <input type="direccion" name="direccion" id="direccion" placeholder="Direccion" required />
+            <label htmlFor="direccion">Direccion</label>
+            <input type="direccion" name="direccion" value={userDireccion} onChange={(e) => SetUserDireccion(e.target.value)} id="direccion" placeholder="Direccion" required />
 
-            <label for="email">Telefono</label>
-            <input type="telefono" name="telefono" id="telefono" placeholder="Telefono" required />
-            <label for="pais">País</label>
+            <label htmlFor="telefono">Telefono</label>
+            <input type="telefono" name="telefono" value={userTelefono} onChange={(e) => SetUserTelefono(e.target.value)} id="telefono" placeholder="Telefono" required />
+            <label htmlFor="pais">País</label>
             <div> <select name="" id="">
                 <option value="Uruguay">Uruguay</option>
                 <option value="Argentina">Argentina</option>
                 <option value="Brasil">Brasil</option>
                 <option value="Chile">Chile</option>
             </select>
-
             </div>
-            <p>precio total {total} </p>
-            <div>
-
-            </div>
-            <button >Generar orden de compra</button>
+            <button type="submit" onClick={ () => {handleData()} }>Generar Orden  </button>
+            </form>
         </div>
     )
 }
