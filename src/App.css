@@ -1,26 +1,42 @@
   @media screen and (min-width: 900px) {
-    .red-social div{
-     margin-left: 30px;
-    width: 40px;
-    height: 40px;
- border-radius: 5px;
+
+    .listado-productos {
+      margin-left: 35%;
     }
-    .facebook{
+
+    .items-carrito__nombre span {
+      font-family: sans-serif;
+      margin-left: 0px;
+      font-size: 23px;
+    }
+
+    .red-social div {
+      margin-left: 30px;
+      width: 40px;
+      height: 40px;
+      border-radius: 5px;
+    }
+
+    .facebook {
       background-image: url(./imagenes/facebook.webp);
       background-size: 100%;
     }
-    .instagram{
+
+    .instagram {
       background-image: url(./imagenes/instagram.png);
       background-size: 100%;
     }
-    .twitter{
+
+    .twitter {
       background-image: url(./imagenes/twitter2.png);
       background-size: 100%;
     }
+
     .red-social {
       display: flex;
-    
+
     }
+
     .abrir-modal-2 {
       display: none;
     }
@@ -69,7 +85,12 @@
 
     .container-items {
       display: flex;
+      flex-direction: row;
+      align-items: center;
       justify-content: center;
+      height: auto;
+      overflow: scroll;
+      width: 100%;
     }
 
     .div-h2 h2 {
@@ -267,6 +288,30 @@
 
   }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   @media screen and (max-width: 480px) {
     body {
       background: rgb(233, 242, 233);
@@ -370,6 +415,11 @@
       border: solid rgba(0, 0, 0, 0.219) 4px;
     }
 
+    .Button {
+      color: white;
+      background-color: black;
+    }
+
     .div-img-container p {
       font-size: 8px;
       margin-left: 30px;
@@ -390,8 +440,11 @@
       background-color: rgb(14, 14, 14);
       color: white;
       border-radius: 5px;
-
-      margin-left: 150px;
+      margin-left: 15px;
+      margin-right: 30px;
+      margin-bottom: 25px;
+      width: 90px;
+      height: 50px;
       border: solid rgba(0, 0, 0, 0.219) 3px;
     }
 
@@ -424,7 +477,8 @@
     }
 
     .div-count .button-2 {
-      margin-left: 7px;
+      margin-left: 0px;
+      margin-right: 4px;
       height: 37px;
       width: 37px;
     }
@@ -442,10 +496,13 @@
       width: 10px;
       margin-top: 0px;
       border-radius: 4px;
-      padding: 11px;
-      padding-top: 7px;
+      padding-right: 15px;
+      padding-left: 15px;
+      padding-top: 10px;
       padding-bottom: 0px;
       margin-right: 10px;
+      margin-left: 30px;
+      height: 30px;
     }
 
     .itemdetail {
@@ -498,6 +555,9 @@
 
     }
 
+    .listado-productos {
+      margin-left: 20%;
+    }
     .abrir-modal div {
       display: flex;
       margin-bottom: 4px;
@@ -523,23 +583,23 @@
 
   .items-carrito {
     display: flex;
-    width: 80%;
-    height: 150px;
+    width: 95%;
+    height: 100px;
     border: 2px rgba(0, 0, 0, 0.171) solid;
     background-color: rgba(0, 0, 255, 0.411);
     margin-bottom: 20px;
-    margin-left: 10%;
+    margin-left: 2%;
     border-radius: 8px;
   }
 
   .items-carrito img {
-    width: 80px;
+    width: 40px;
     height: auto;
 
   }
 
   .items-carrito div {
-    margin-right: 30px;
+    margin-right: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -551,7 +611,17 @@
   }
 
   .items-carrito__nombre {
-    width: 300px;
+    width: 120px;
+  }
+
+  .items-carrito div p {
+    margin-left: 0px;
+    font-size: 9px;
+  }
+
+  .items-carrito div h4 {
+    margin-left: 0px;
+    font-size: 9px;
   }
 
   .cart-style__children {
@@ -560,19 +630,28 @@
     padding-top: 14px;
     padding-bottom: 14px;
     width: 90%;
+    height: 500px;
     margin-left: 5%;
     border-radius: 5px;
+    margin-bottom: 20px;
+    overflow-x: auto;
   }
 
   .cart-style__children__link {
-    margin-left: 43%;
+    margin-left: 37%;
     text-decoration: none;
     color: white;
     background-color: rgba(0, 0, 0, 0.959);
     font-family: 'Times New Roman', Times, serif;
-    padding: 20px;
+    padding: 9px;
     border-radius: 4px;
-    font-size: 20px;
+    font-size: 12px;
+  }
+
+  .items-carrito__nombre span {
+    font-family: sans-serif;
+    margin-left: 0px;
+    font-size: 8px;
   }
 
   .container-icon__span {
@@ -583,14 +662,12 @@
     margin-left: 190px;
     width: 30px;
     border-radius: 3px;
-   background-image: url(./imagenes/cerrar.png);
-   background-size: 85%;
-   background-position: 2px;
+    background-image: url(./imagenes/cerrar.png);
+    background-size: 85%;
+    background-position: 2px;
   }
 
   .abrir-modal-2 {
-    border: 3px solid rgba(9, 25, 255, 0.356);
-    border-radius: 30px;
     background-image: url(./imagenes/abrir2.png);
     background-size: 30px;
   }
@@ -598,9 +675,11 @@
   .pie-pagina {
     width: 100%;
   }
-.pie-pagina{
-  margin-top: 30px;
-}
+
+  .pie-pagina {
+    margin-top: 30px;
+  }
+
   .pie-pagina .grupo-1 {
     width: 100%;
     margin: auto;
@@ -671,6 +750,8 @@
     font-size: 15px;
   }
 
+  
+
   .pie-pagina .grupo-1 {
     width: 100%;
     grid-template-columns: repeat(1, 1fr);
@@ -679,6 +760,24 @@
     background-color: rgb(63, 63, 70);
 
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   @media screen and (min-width: 720px) {
     .pie-pagina .grupo-1 .box figure img {
@@ -714,7 +813,73 @@
     }
   }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   @media screen and (min-width: 1200px) {
+
+    .items-carrito__nombre {
+      width: 120px;
+    }
+
+    .items-carrito div p {
+      margin-left: 120px;
+      font-size: 15px;
+    }
+
+    .items-carrito div h4 {
+      margin-left: 0px;
+      font-size: 15px;
+    }
+
+    .items-carrito div img {
+      width: 70px;
+      height: auto;
+    }
+
+    .cart-style__children {
+      width: 70%;
+      height: 400px;
+      margin-left: 15%;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      overflow-x: auto;
+    }
+
+    .cart-style__children__link {
+      padding: 20px;
+      margin-left: 43%;
+    }
+
+    .items-carrito {
+      display: flex;
+      width: 90%;
+      height: 150px;
+      border: 2px rgba(0, 0, 0, 0.171) solid;
+      background-color: rgba(0, 0, 255, 0.411);
+      margin-bottom: 20px;
+      margin-left: 5%;
+      border-radius: 8px;
+    }
+
+    .items-carrito__nombre span {
+      font-family: sans-serif;
+      margin-left: 0px;
+      font-size: 17px;
+    }
+
     .pie-pagina .grupo-1 {
       width: 100%;
       margin: auto;
@@ -753,4 +918,12 @@
       text-align: center;
       transition: all 300ms ease;
     }
+  }
+
+  footer {
+    background: linear-gradient(to right, rgb(37, 37, 40), rgb(135, 135, 137));
+  }
+
+  footer p {
+    color: bisque
   }

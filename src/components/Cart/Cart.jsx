@@ -21,7 +21,7 @@ const Cart = () => {
                         cart.map(prod => {
                             return (
                                 <div className='items-carrito' key={prod.id}>
-                                    <div className='items-carrito__nombre'><h2 style={{ fontFamily: "inherit" }}>Nombre: <span style={{ fontFamily: "serif", marginLeft: "0px", fontSize: "23px" }}>{prod.nombre}</span></h2> </div>
+                                    <div className='items-carrito__nombre'><h2 style={{ fontFamily: "inherit" }}>Nombre: <span>{prod.nombre}</span></h2> </div>
                                     <div><p>Precio: ${prod.precio}</p></div>
                                     <div><img src={prod.img} alt={prod.nombre} /></div>
                                     <div><h4>Cantidad: {prod.count} </h4></div>

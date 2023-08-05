@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom'
 const Checkout = () => {
     const [orderId, setOrderId] = useState('')
     const [loading, setLoading] = useState(false)
-    const [userData, SetUserData] = useState()
+    const [userData, SetUserData] = useState("")
     const { cart, total, clearCart, mensaje} = useContext(CartContext)
     const navigate = useNavigate()
    

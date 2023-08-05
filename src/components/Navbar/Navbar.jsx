@@ -12,11 +12,11 @@ SetAbrirModal(mensaje)
     
     if(abrirModal === false){
         return(
-        <header>
-            <NavLink className={"nav-link"} to="./">SuperDescuento</NavLink>
+        <header> <NavLink className={"nav-link"} to="./">SuperDescuento</NavLink>
+      
             <Button/>            
             <Cartwidget/> 
-            <div className="abrir-modal-2" onClick={() => {SetAbrirModal(true)}} style={{width:"30px", height:"30px", backgroundColor:"red", marginLeft:"25%"}}></div>       
+            <div className="abrir-modal-2" onClick={() => {SetAbrirModal(true)}} style={{width:"30px", height:"30px", marginLeft:"25%"}}></div>       
         </header>
 )    }
     return (

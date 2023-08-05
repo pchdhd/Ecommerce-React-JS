@@ -7,14 +7,19 @@ const Form = ({ cart, onConfirm, total, datos, handleConfirm }) => {
     const [userTelefono, SetUserTelefono] = useState("")
 
     const handleData = () => {
-        datos({useremail: userEmail, userdireccion: userDireccion,userTelefono: userTelefono})
-        handleConfirm()
+        if(userEmail != "" && userDireccion!= "" && userTelefono != ""){
+            datos({useremail: userEmail, userdireccion: userDireccion,userTelefono: userTelefono})
+            handleConfirm()
+        }
+        else{
+            alert("Agrega todos tus datos para continuar.")
+        }
+        
     }
-
 
     return (
         <div style={{ display: "grid", justifyContent: "center" }}>
-            <form onSubmit={handleData}>
+            <form onSubmit={handleData} style={{display:"flex", flexDirection:"column"}}>
             <label htmlFor="email">Email</label>
             <input type="email" name="email" value={userEmail} onChange={(e) => SetUserEmail(e.target.value)} placeholder="Email" required />
 
@@ -31,7 +36,7 @@ const Form = ({ cart, onConfirm, total, datos, handleConfirm }) => {
                 <option value="Chile">Chile</option>
             </select>
             </div>
-            <button type="submit" onClick={ () => {handleData()} }>Generar Orden  </button>
+            <button type="submit" onClick={ () => {handleData()} }  style={{color:"white", backgroundColor:"black", marginTop:"30px", marginBottom:"20px"}}>Generar Orden  </button>
             </form>
         </div>
     )

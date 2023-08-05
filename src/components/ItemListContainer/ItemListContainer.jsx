@@ -32,13 +32,13 @@ const data = doc.data()
 }, [categoryId])
 
 
-if(loading) {
+if(loading === true) {
     return <h4>Cargando...</h4>
 }
 
 return (
     <div> 
-    <span>{greeting}</span>
+    <span className="listado-productos">{greeting}</span>
     <ProductList products={productsState}/>
     <Footer/>
     </div>

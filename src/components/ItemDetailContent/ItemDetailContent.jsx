@@ -26,7 +26,7 @@ const ItemDetailContainer = () => {
     if (loading) {
         return <h2 >Cargando por favor espere...</h2>
     }
-    
+    console.log(product)
     return (
         <div>
             <div className="itemdetail-container__back"></div>
